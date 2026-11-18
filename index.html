@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>منصة بصمة أثر | برنامج العلاقات العامة</title>
+  <meta name="description" content="منصة رقمية تابعة لبرنامج العلاقات العامة، تُعنى بإطلاق وتوثيق المبادرات الطلابية والحملات التوعوية، وإبراز الدور المجتمعي والمهني لطالبات القسم." />
+
+  <!-- خط تجوال العربي من Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&display=swap" rel="stylesheet" />
+
+  <!-- مكتبة الأيقونات Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- مكتبة Tailwind CSS (CDN) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Tajawal', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              50: '#f0f8f8',
+              100: '#d9efef',
+              500: '#3b8c91',
+              600: '#2d7277',
+              700: '#255c60',
+              900: '#16393c',
+            },
+            accent: {
+              400: '#f5b841',
+              500: '#e09f24',
+            }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased">
+
+  <!-- ================= شريط التنقل العلوي (Navbar) ================= -->
+  <header class="bg-white/95 backdrop-blur-md sticky top-0 z-50 border-b border-slate-200 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-20">
+        
+        <!-- الشعار واسم المنصة -->
+        <a href="index.html" class="flex items-center gap-3 group">
+          <div class="w-11 h-11 rounded-xl bg-brand-600 text-white flex items-center justify-center shadow-md group-hover:bg-brand-700 transition">
+            <i class="fa-solid fa-fingerprint text-xl"></i>
+          </div>
+          <div>
+            <span class="block text-xl font-extrabold text-brand-900 leading-tight">منصة بصمة أثر</span>
+            <span class="block text-xs text-brand-600 font-medium">برنامج العلاقات العامة</span>
+          </div>
+        </a>
+
+        <!-- روابط التنقل للشاشات الكبيرة -->
+        <nav class="hidden md:flex items-center gap-8 font-medium">
+          <a href="index.html" class="text-brand-600 font-bold border-b-2 border-brand-600 pb-1">الرئيسية</a>
+          <a href="initiatives.html" class="text-slate-600 hover:text-brand-600 transition">المبادرات والحملات</a>
+          <a href="about.html" class="text-slate-600 hover:text-brand-600 transition">عن المنصة والبرنامج</a>
+          <a href="#media-gallery" class="text-slate-600 hover:text-brand-600 transition">الوسائط المتعددة</a>
+        </nav>
+
+        <!-- زر دعوة لاتخاذ إجراء (CTA) -->
+        <div class="hidden md:block">
+          <a href="initiatives.html" class="inline-flex items-center gap-2 bg-brand-600 hover:bg-brand-700 text-white px-5 py-2.5 rounded-xl font-bold text-sm shadow-sm transition">
+            <span>استكشفي المبادرات</span>
+            <i class="fa-solid fa-arrow-left text-xs"></i>
+          </a>
+        </div>
+
+        <!-- زر القائمة للجوال -->
+        <button id="menu-btn" aria-label="فتح القائمة" class="md:hidden text-slate-700 hover:text-brand-600 p-2 focus:outline-none">
+          <i class="fa-solid fa-bars text-2xl"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- قائمة الجوال المنسدلة -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100 px-4 py-4 space-y-3 shadow-lg">
+      <a href="index.html" class="block py-2 px-3 rounded-lg bg-brand-50 text-brand-700 font-bold">الرئيسية</a>
+      <a href="initiatives.html" class="block py-2 px-3 rounded-lg text-slate-700 hover:bg-slate-50 font-medium">المبادرات والحملات</a>
+      <a href="about.html" class="block py-2 px-3 rounded-lg text-slate-700 hover:bg-slate-50 font-medium">عن المنصة والبرنامج</a>
+      <a href="#media-gallery" class="block py-2 px-3 rounded-lg text-slate-700 hover:bg-slate-50 font-medium">الوسائط المتعددة</a>
+    </div>
+  </header>
+
+  <!-- ================= القسم الترحيبي (Hero Section) ================= -->
+  <section class="relative overflow-hidden bg-gradient-to-bl from-brand-900 via-brand-700 to-brand-600 text-white py-20 lg:py-28">
+    <!-- خلفية زخرفية خفيفة -->
+    <div class="absolute inset-0 opacity-10 pointer-events-none">
+      <div class="absolute -top-24 -left-24 w-96 h-96 rounded-full bg-white blur-3xl"></div>
+      <div class="absolute bottom-0 right-10 w-72 h-72 rounded-full bg-accent-400 blur-3xl"></div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- النص الترحيبي -->
+        <div class="lg:col-span-7 space-y-6">
+          <div class="inline-flex items-center gap-2 bg-white/15 backdrop-blur-sm border border-white/20 px-4 py-1.5 rounded-full text-sm font-medium text-brand-50">
+            <i class="fa-solid fa-bullhorn text-accent-400"></i>
+            <span>نصنع التواصل.. ونترك الأثر</span>
+          </div>
+
+          <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-snug lg:leading-tight">
+            أهلاً بكم في بصمة أثر.. حيث تتحول أفكار العلاقات العامة إلى واقع ملموس.
+          </h1>
+
+          <p class="text-lg text-brand-50/90 leading-relaxed max-w-2xl">
+            منصة رقمية تابعة لبرنامج العلاقات العامة، تُعنى بإطلاق وتوثيق المبادرات الطلابية والحملات التوعوية، وإبراز الدور المجتمعي والمهني لطالبات القسم.
+          </p>
+
+          <div class="flex flex-wrap gap-4 pt-2">
+            <a href="initiatives.html" class="inline-flex items-center gap-2 bg-accent-400 hover:bg-accent-500 text-slate-900 font-extrabold px-6 py-3.5 rounded-xl shadow-lg transition">
+              <span>تصفحي المبادرات الطلابية</span>
+              <i class="fa-solid fa-rocket"></i>
+            </a>
+            <a href="about.html" class="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 border border-white/30 text-white font-bold px-6 py-3.5 rounded-xl backdrop-blur-sm transition">
+              <span>تعرفي على رسالتنا</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- بطاقة عرض مرئية (Visual Highlight Card) -->
+        <div class="lg:col-span-5">
+          <div class="bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl p-6 shadow-2xl space-y-5">
+            <div class="aspect-video rounded-2xl bg-brand-900/60 flex flex-col items-center justify-center border border-white/10 p-6 text-center relative overflow-hidden">
+              <!-- يمكنك استبدال هذا الجزء بصورة الحملة الرئيسية لاحقاً -->
+              <div class="w-16 h-16 rounded-full bg-accent-400 text-slate-900 flex items-center justify-center mb-3 shadow-lg">
+                <i class="fa-solid fa-handshake-angle text-2xl"></i>
+              </div>
+              <h3 class="text-xl font-bold text-white">حملة بصمة أثر</h3>
+              <p class="text-sm text-brand-100 mt-1">الحاضنة الرقمية لمشاريع ومبادرات طالبات العلاقات العامة</p>
+            </div>
+
+            <div class="grid grid-cols-2 gap-3 text-sm">
+              <div class="bg-white/10 rounded-xl p-3 flex items-center gap-3">
+                <i class="fa-solid fa-pen-nib text-accent-400 text-lg"></i>
+                <div>
+                  <span class="block font-bold">محتوى إعلامي</span>
+                  <span class="text-xs text-brand-100">صياغة رقمية احترافية</span>
+                </div>
+              </div>
+              <div class="bg-white/10 rounded-xl p-3 flex items-center gap-3">
+                <i class="fa-solid fa-users text-accent-400 text-lg"></i>
+                <div>
+                  <span class="block font-bold">أثر مجتمعي</span>
+                  <span class="text-xs text-brand-100">شراكات وحملات توعوية</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= شريط الأرقام والإنجازات (Statistics Bar) ================= -->
+  <section id="stats-section" class="relative -mt-10 z-20 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="bg-white rounded-3xl shadow-xl border border-slate-100 p-8 grid grid-cols-1 md:grid-cols-3 gap-8 divide-y md:divide-y-0 md:divide-x md:divide-x-reverse divide-slate-100">
+      
+      <!-- إحصائية 1 -->
+      <div class="flex items-center justify-center gap-5 pt-4 md:pt-0">
+        <div class="w-16 h-16 rounded-2xl bg-brand-50 text-brand-600 flex items-center justify-center shrink-0">
+          <i class="fa-solid fa-lightbulb text-2xl"></i>
+        </div>
+        <div>
+          <div class="text-3xl sm:text-4xl font-black text-brand-900">
+            <span>+</span><span class="counter" data-target="15">15</span>
+          </div>
+          <p class="text-slate-600 font-bold mt-1">مبادرة طلابية</p>
+        </div>
+      </div>
+
+      <!-- إحصائية 2 -->
+      <div class="flex items-center justify-center gap-5 pt-6 md:pt-0">
+        <div class="w-16 h-16 rounded-2xl bg-amber-50 text-accent-500 flex items-center justify-center shrink-0">
+          <i class="fa-solid fa-heart-pulse text-2xl"></i>
+        </div>
+        <div>
+          <div class="text-3xl sm:text-4xl font-black text-brand-900">
+            <span>+</span><span class="counter" data-target="500">500</span>
+          </div>
+          <p class="text-slate-600 font-bold mt-1">مستفيد ومستفيدة</p>
+        </div>
+      </div>
+
+      <!-- إحصائية 3 -->
+      <div class="flex items-center justify-center gap-5 pt-6 md:pt-0">
+        <div class="w-16 h-16 rounded-2xl bg-brand-50 text-brand-600 flex items-center justify-center shrink-0">
+          <i class="fa-solid fa-handshake text-2xl"></i>
+        </div>
+        <div>
+          <div class="text-3xl sm:text-4xl font-black text-brand-900">
+            <span class="counter" data-target="10">10</span>
+          </div>
+          <p class="text-slate-600 font-bold mt-1">شراكات مجتمعية</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= نبذة تعريفية عن المنصة (Overview) ================= -->
+  <section class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-3xl mx-auto space-y-4 mb-14">
+      <span class="text-brand-600 font-bold text-sm tracking-wide bg-brand-50 px-4 py-1.5 rounded-full">الرؤية والانطلاقة</span>
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900">عن منصة بصمة أثر</h2>
+      <p class="text-lg text-slate-600 leading-relaxed">
+        انطلقت منصة "بصمة أثر" كواجهة رقمية لبرنامج العلاقات العامة، لتكون الحاضنة الأولى لمبادرات الطالبات، وحلقة الوصل بين المعرفة الأكاديمية وخدمة المجتمع.
+      </p>
+    </div>
+
+    <!-- ركائز المنصة -->
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="bg-white p-8 rounded-2xl border border-slate-200/80 shadow-sm hover:shadow-md transition">
+        <div class="w-12 h-12 rounded-xl bg-brand-50 text-brand-600 flex items-center justify-center mb-5">
+          <i class="fa-solid fa-bullhorn text-xl"></i>
+        </div>
+        <h3 class="text-xl font-bold text-slate-900 mb-3">إطلاق الحملات التوعوية</h3>
+        <p class="text-slate-600 leading-relaxed">
+          تخطيط وتنفيذ حملات إعلامية متكاملة تعالج قضايا المجتمع وتنشر الوعي بأسلوب إبداعي مؤثر.
+        </p>
+      </div>
+
+      <div class="bg-white p-8 rounded-2xl border border-slate-200/80 shadow-sm hover:shadow-md transition">
+        <div class="w-12 h-12 rounded-xl bg-amber-50 text-accent-500 flex items-center justify-center mb-5">
+          <i class="fa-solid fa-box-archive text-xl"></i>
+        </div>
+        <h3 class="text-xl font-bold text-slate-900 mb-3">توثيق الم
